@@ -1,17 +1,25 @@
 {
-  "name": "nuxt-app",
+  "name": "VueFullCalendar",
   "private": true,
   "type": "module",
+  "author": "Ahmad Abu-omar <ahmad.abuomar@me.com> (@ahmadao)",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "prepare": "husky install"
   },
   "devDependencies": {
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.0",
     "nuxt": "^3.9.1",
+    "prettier": "3.2.1",
     "vue": "^3.4.10",
     "vue-router": "^4.2.5"
+  },
+  "lint-staged": {
+    "*.{js,css,md}": "prettier --write"
   }
 }
